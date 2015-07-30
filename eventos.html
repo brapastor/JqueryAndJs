@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos</title>
+
+</head>
+<body>
+	<button id="miBoton">Haz click aqui</button>
+	<script>
+		window.addEventListener('load',function(){
+			alert('La pagina se a cargado');				
+		});
+		var boton = document.getElementById("miBoton");
+		window.addEventListener("keydown",tecla_precionada);
+		boton.addEventListener("click", function(){
+			alert("Bienvenido a codigo facilito");
+			boton.addEventListener("click",boton_click);
+		});
+
+		function boton_click(evento){
+			alert("Bienvenido a codigo facilito");
+			alert(evento.type)
+		}
+
+		function tecla_precionada(evento){
+			
+			alert(evento.keyCode)
+		}
+	</script>
+</body>
+</html>
